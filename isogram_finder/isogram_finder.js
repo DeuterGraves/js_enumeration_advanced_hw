@@ -1,11 +1,12 @@
 const IsogramFinder = function (word) {
   this.word = word.split('');
+  uniques = []
 }
 
 
 function includeChecker(letter) {
-  let uniques = []
-  if (uniques.includes(letter) === false ){
+  // var uniques = []
+  if (uniques.includes(letter) != true ){
     uniques.push(letter);
     return true;
     console.log("uniquest", uniques);
@@ -18,10 +19,20 @@ function includeChecker(letter) {
 // console.log("every array", array1.every(includeChecker));
 
 IsogramFinder.prototype.isIsogram = function () {
-  console.log("this word", this.word);
-  return this.word.every(includeChecker);
-   console.log(this.word.every(includeChecker));
-}
+for (var letter in this.word ){
+  if (uniques.includes(letter) != true ){
+    uniques.push(letter);
+    return true;
+    console.log("uniquest", uniques);
+  }else{
+    return false;
+  }
+]
+  // console.log("this word", this.word);
+  // console.log("YOUNEEKS", uniques);
+  // return this.word.every(includeChecker);
+   // console.log(this.word.every(includeChecker));
+};
 
 
 /*
